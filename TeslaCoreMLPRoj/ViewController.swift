@@ -9,15 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    // IBOutlets
+    @IBOutlet weak var modelSegmentControl: UISegmentedControl!
+    
+    @IBOutlet weak var premiumSegmentControl: UISegmentedControl!
+    
+    @IBOutlet weak var mileageLbl: UILabel!
+    @IBOutlet weak var mileageSlider: UISlider!
+    
+    @IBOutlet weak var conditionSegmentControl: UISegmentedControl!
+    
+    @IBOutlet weak var valuationLbl: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        mileageLbl.text = "MILEAGE - \(Int(mileageSlider.value)) miles"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //IBAction
+    
+    @IBAction func calculateValye(sender:Any) {
+        
+        if sender is UISlider {
+            mileageLbl.text = "MILEAGE - \(Int(mileageSlider.value)) miles"
+        }
     }
 
 
