@@ -12,6 +12,7 @@
 		896F87DE1FE5C63C009874D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896F87DC1FE5C63C009874D3 /* Main.storyboard */; };
 		896F87E01FE5C63C009874D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 896F87DF1FE5C63C009874D3 /* Assets.xcassets */; };
 		896F87E31FE5C63C009874D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896F87E11FE5C63C009874D3 /* LaunchScreen.storyboard */; };
+		896F87F11FE5DD3B009874D3 /* Cars.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 896F87F01FE5DD3A009874D3 /* Cars.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		896F87DF1FE5C63C009874D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		896F87E21FE5C63C009874D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		896F87E41FE5C63C009874D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		896F87F01FE5DD3A009874D3 /* Cars.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Cars.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				896F87DF1FE5C63C009874D3 /* Assets.xcassets */,
 				896F87E11FE5C63C009874D3 /* LaunchScreen.storyboard */,
 				896F87E41FE5C63C009874D3 /* Info.plist */,
+				896F87F01FE5DD3A009874D3 /* Cars.mlmodel */,
 			);
 			path = TeslaCoreMLPRoj;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				896F87DB1FE5C63C009874D3 /* ViewController.swift in Sources */,
 				896F87D91FE5C63C009874D3 /* AppDelegate.swift in Sources */,
+				896F87F11FE5DD3B009874D3 /* Cars.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
