@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let cars = Cars()
+    
     
     // IBOutlets
     @IBOutlet weak var modelSegmentControl: UISegmentedControl!
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calculateValye(sender: self)
         mileageLbl.text = "MILEAGE - \(Int(mileageSlider.value)) miles"
     }
     
@@ -35,11 +38,22 @@ class ViewController: UIViewController {
     
     @IBAction func calculateValye(sender:Any) {
         
-        if sender is UISlider {
-            mileageLbl.text = "MILEAGE - \(Int(mileageSlider.value)) miles"
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
+        let formattedMileage = formatter.string(for: mileageSlider.value) ?? "0"
+        mileageLbl.text = "MILEAGE - \(formattedMileage) miles"
+        
+        
+        if let prediction = try? cars.prediction(model: Double(modelSegmentControl.selectedSegmentIndex), premium: Double(premiumSegmentControl.selectedSegmentIndex), mileage: Double(mileageSlider.value), condition: Double(conditionSegmentControl.selectedSegmentIndex)) {
+            
+            let clampedValuation = max(2000,prediction.price)
+            formatter.numberStyle = .currency
+            valuationLbl.text = formatter.string(for: clampedValuation)
+            
+        } else {
+            valuationLbl.text = "Error"
         }
     }
-
-
 }
 
