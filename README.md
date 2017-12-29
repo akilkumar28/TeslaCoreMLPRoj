@@ -1,3 +1,3 @@
 # TeslaCoreMLPRoj
 
-An app that can calculate the resale value of your tesla car using machine learning.
+This app that can calculate the resale value of your Tesla car using machine learning.
